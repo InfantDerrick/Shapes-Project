@@ -1,16 +1,23 @@
 
 public abstract class Line extends Shape {
-
-	@Override
-	public void paintOn(Screen screen, int xCoord, int yCoord) {
-		// TODO Auto-generated method stub
-
+	private int length;
+	public Line(char paintCharacter, int length){
+		super(paintCharacter);
+		this.length = length;
 	}
 
-	@Override
-	public void paintOn(Screen screen) {
-		// TODO Auto-generated method stub
+    public int getLength() {
+        return length;
+    }
 
-	}
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    @Override
+	public abstract void paintOn(Screen s, int x, int y);
+
+	@Override
+	public abstract void paintOn(Screen s);
 
 }

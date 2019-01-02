@@ -107,14 +107,14 @@ public class Screen {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Screen sc = new Screen(15, 10, '-');
-		
-		sc.draw();
-		
-		sc.paintAt(3, 5, 'A');
-		sc.paintAt(3, 2, 'B');
-		
-		sc.draw();
+//		Screen sc = new Screen(15, 10, '-');
+//
+//		sc.draw();
+//
+//		sc.paintAt(3, 5, 'A');
+//		sc.paintAt(3, 2, 'B');
+//
+//		sc.draw();
 	}
 
 }
