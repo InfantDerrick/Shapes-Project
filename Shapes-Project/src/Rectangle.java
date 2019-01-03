@@ -49,22 +49,4 @@ public abstract class Rectangle extends Shape{
     public int getHeight() {
         return height;
     }
-
-    @Override
-    /**
-     * Paints the shape onto a screen at given position
-     * @param s the Screen to be painted on
-     * @param x the x coordinate
-     * @param y the y coordinate
-     */
-    public void paintOn(Screen s, int x, int y) {
-        for(int w = 0; w < width; w++){
-            s.paintAt(x + w,y,getPaintCharacter());
-            s.paintAt(x + w,y + height-1,getPaintCharacter());
-        }
-        for (int l = 0; l < height; l++){
-            s.paintAt(x, y+l, getPaintCharacter());
-            s.paintAt(x + width-1, y+l, getPaintCharacter());
-        }
-    }
 }
