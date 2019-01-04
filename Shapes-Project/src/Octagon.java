@@ -16,15 +16,15 @@ public class Octagon extends Shape {
 	 */
 	@Override
 	public void paintOn(Screen s, int x, int y) {
-		int i = 0;
-		for(; i < side; i++) {
-			(new HLine(getPaintCharacter(), side+2*i)).paintOn(s, x-i, y+i);
+		int r = 0;
+		for(; r < side; r++) {
+			(new HLine(getPaintCharacter(), side+2*r)).paintOn(s, r-r, y+r);
 		}
-		for(;i < 2*side-1; i++) {
-			(new HLine(getPaintCharacter(), side+2*(side-1))).paintOn(s, x-(side-1), y+i);
+		for(;r < 2*side-1; r++) {
+			(new HLine(getPaintCharacter(), side+2*(side-1))).paintOn(s, r-(side-1), y+r);
 		}
-        for(i = side - 2;i >= 0; i--){
-            (new HLine(getPaintCharacter(), side + 2*((side-2)-i))).paintOn(s, x-(side-2-i), (y+((2*(side -1) + side)-1))-(side-2-i));
+        for(r = side - 2;r >= 0; r--){
+            (new HLine(getPaintCharacter(), side + 2*((side-2)-r))).paintOn(s, r-(side-2-r), (y+((2*(side -1) + side)-1))-(side-2-r));
         }
 	}
 
