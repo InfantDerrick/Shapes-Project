@@ -18,13 +18,13 @@ public class Octagon extends Shape {
 	public void paintOn(Screen s, int x, int y) {
 		int r = 0;
 		for(; r < side; r++) {
-			(new HLine(getPaintCharacter(), side+2*r)).paintOn(s, r-r, y+r);
+			(new HLine(getPaintCharacter(), side+2*r)).paintOn(s, x-r, y+r);
 		}
 		for(;r < 2*side-1; r++) {
-			(new HLine(getPaintCharacter(), side+2*(side-1))).paintOn(s, r-(side-1), y+r);
+			(new HLine(getPaintCharacter(), side+2*(side-1))).paintOn(s, x-(side-1), y+r);
 		}
         for(r = side - 2;r >= 0; r--){
-            (new HLine(getPaintCharacter(), side + 2*((side-2)-r))).paintOn(s, r-(side-2-r), (y+((2*(side -1) + side)-1))-(side-2-r));
+            (new HLine(getPaintCharacter(), side + 2*((side-2)-r))).paintOn(s, x-(side-2-r), (y+((2*(side -1) + side)-1))-(side-2-r));
         }
 	}
 
